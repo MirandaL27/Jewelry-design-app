@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const Shape = new Schema(
+const ShapeSchema = new Schema(
     {
         Type: {
             type: String,
@@ -11,4 +11,5 @@ const Shape = new Schema(
 
 )
 
+const Shape = model('InspirationalImage', ShapeSchema);
 module.exports = Shape;

@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const InspirationalImage = new Schema(
+const InspirationalImageSchema = new Schema(
     {
         name: {
             type: String,
@@ -95,6 +95,6 @@ const InspirationalImage = new Schema(
 );
 
 
-const User = model('User', userSchema);
+const InspirationalImage = model('InspirationalImage', InspirationalImageSchema);
 
-module.exports = User;
+module.exports = InspirationalImage;

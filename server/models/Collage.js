@@ -1,10 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 
-
-
-
-const Collage = new Schema(
+const CollageSchema = new Schema(
     {
         collageName: {
             type: String,
@@ -76,5 +73,6 @@ const Collage = new Schema(
     }
 
 )
+const Collage = model('InspirationalImage', CollageSchema);
 
 module.exports = Collage;

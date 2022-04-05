@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const Logo = new Schema(
+const LogoSchema = new Schema(
     {
         logoName: {
             type: String,
@@ -35,5 +35,6 @@ const Logo = new Schema(
     }
 
 )
+const Logo = model('InspirationalImage', LogoSchema);
 
 module.exports = Logo;

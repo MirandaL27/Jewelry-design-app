@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const Style = new Schema(
+const StyleSchema = new Schema(
     {
         Type: {
             type: String,
@@ -10,5 +10,5 @@ const Style = new Schema(
     }
 
 )
-
+const Style = model('InspirationalImage', StyleSchema);
 module.exports = Style;
