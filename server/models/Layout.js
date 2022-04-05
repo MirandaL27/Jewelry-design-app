@@ -1,11 +1,10 @@
 const { Schema, model } = require('mongoose');
-
+//TODO: finish this schema! 
 const LayoutSchema = new Schema(
     {
-        Type: {
+        layoutType: {
             type: String,
-            required: true,
-            trim: true
+            required: true
         }
     }
 

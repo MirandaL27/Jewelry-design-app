@@ -12,26 +12,10 @@ const LogoSchema = new Schema(
             required: true,
             trim: true
         },
-        color1: {
+        colors: [{
             type: Schema.Types.ObjectId,
             ref: 'Color'
-        },
-        color2: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color3: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color4: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color5: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        }
+        }],
     }
 
 )

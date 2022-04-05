@@ -1,11 +1,29 @@
 const { Schema, model } = require('mongoose');
-
+//TODO: finish this schema! 
 const ShopSchema = new Schema(
     {
-        Type: {
+        shopName: {
             type: String,
             required: true,
             trim: true
+        },
+        ownerName: {
+            type: String,
+            trim: true
+        },
+        shopRating: {
+            type: Number
+        },
+        link: {
+            type: String
+        },
+        numberOfSales: {
+            type: Number
+        },
+        updated_at: {
+            type: Date,
+            default: Date.now,
+            get: timestamp => dateFormat(timestamp)
         }
     }
 

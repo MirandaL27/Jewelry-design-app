@@ -33,45 +33,10 @@ const InspirationalImageSchema = new Schema(
             type: Number,
             required: true
         },
-        color1: {
-            type: String
-        },
-        color2: {
+        colors: [{
             type: Schema.Types.ObjectId,
             ref: 'Color'
-        },
-        color3: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color4: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color5: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color6: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color7: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color8: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color9: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
-        color10: {
-            type: Schema.Types.ObjectId,
-            ref: 'Color'
-        },
+        }],
         user: {
             type: Schema.Types.ObjectId,
             ref: 'User'
