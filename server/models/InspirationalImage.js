@@ -29,7 +29,7 @@ const InspirationalImageSchema = new Schema(
         price: {
             type: Number
         },
-        rating: {
+        likeRating: {
             type: Number,
             required: true
         },
