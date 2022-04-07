@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const JewelryTypeSchema = new Schema(
     {
-        Type: {
+        jewelryType: {
             type: String,
             required: true,
             trim: true
