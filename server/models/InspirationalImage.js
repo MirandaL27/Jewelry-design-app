@@ -13,7 +13,8 @@ const InspirationalImageSchema = new Schema(
             trim: true
         },
         style: {
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: 'Style',
         },
         artist: {
             type: String,
@@ -23,7 +24,7 @@ const InspirationalImageSchema = new Schema(
         },
         Type: {
             type: Schema.Types.ObjectId,
-            ref: 'jewelryType',
+            ref: 'JewelryType',
             required: true
         },
         price: {

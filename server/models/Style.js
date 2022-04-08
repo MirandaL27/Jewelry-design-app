@@ -2,24 +2,24 @@ const { Schema, model } = require('mongoose');
 
 const StyleSchema = new Schema(
     {
-        Type: {
+        type: {
             type: String,
             required: true,
             trim: true
         },
-        Background: {
+        background: {
             type: String,
             trim: true
         },
-        StyleElements: {
+        styleElements: {
             type: String,
             trim: true
         },
-        TimePeriod: {
+        timePeriod: {
             type: String,
             trim: true
         },
-        Notes: {
+        notes: {
             type: String,
             trim: true
         }

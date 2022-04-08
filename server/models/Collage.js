@@ -49,9 +49,16 @@ const CollageSchema = new Schema(
         captions: {
             type: Boolean
         },
+        captionText: [
+            {
+                type: String,
+                trim: true
+            }
+        ],
         title: {
             type: Boolean
         },
+
         font: {
             type: String
         },
@@ -64,8 +71,12 @@ const CollageSchema = new Schema(
                 ref: "InspirationalImage"
             }
         ],
-        imagePositions: [],
-        imageCaptions: [],
+        imagePositions: [
+            {
+                type: Number,
+                required: true
+            }
+        ],
         titleText: {
             type: String
         }

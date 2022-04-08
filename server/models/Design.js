@@ -48,6 +48,14 @@ DesignSchema.virtual("TotalPrice").get(function() {
     return totalPrice;
 });
 
+DesignSchema.virtual("TotalShippingPrice").get(function() {
+    let totalPrice = 0;
+    this.components.forEach(component => {
+        totalPrice += component.shippingPrice;
+    });
+    return totalPrice
+});
+
 DesignSchema.virtual("TotalMaxPrice").get(function() {
     let totalPrice = 0;
     this.components.forEach(component => {

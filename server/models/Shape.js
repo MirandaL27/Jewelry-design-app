@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const ShapeSchema = new Schema(
     {
-        Type: {
+        type: {
             type: String,
             required: true,
             trim: true

@@ -2,24 +2,29 @@ const { Schema, model } = require('mongoose');
 
 const ComponentSchema = new Schema(
     {
+        componentName: {
+            type: String,
+            required: true,
+            trim: true
+        },
         componentType: {
             type: Schema.Types.ObjectId,
             ref: 'ComponentType',
             required: true
         },
-        Style: {
+        style: {
             type: Schema.Types.ObjectId,
             ref: 'Style',
             required: true
         },
-        Material: {
+        material: [{
             type: Schema.Types.ObjectId,
             ref: 'Material',
-        },
-        StoneType: {
+        }],
+        stoneType: [{
             type: Schema.Types.ObjectId,
             ref: 'Stone',
-        },
+        }],
         countryOfOrigin: {
             type: Schema.Types.ObjectId,
             ref: 'Country'
@@ -38,7 +43,7 @@ const ComponentSchema = new Schema(
             type: Number,
             required: true
         },
-        Quantity: {
+        quantity: {
             type: Number,
         },
         maxPrice: {
@@ -56,7 +61,7 @@ const ComponentSchema = new Schema(
         shippingTime: {
             type: String
         },
-        Colors: [{
+        colors: [{
             type: Schema.Types.ObjectId,
             ref: 'Color'
         }],
