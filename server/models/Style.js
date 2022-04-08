@@ -26,5 +26,5 @@ const StyleSchema = new Schema(
     }
 
 )
-const Style = model('InspirationalImage', StyleSchema);
+const Style = model('Style', StyleSchema);
 module.exports = Style;

@@ -11,6 +11,6 @@ const JewelryTypeSchema = new Schema(
 
 )
 
-const JewelryType = model('InspirationalImage', JewelryTypeSchema);
+const JewelryType = model('JewelryType', JewelryTypeSchema);
 
 module.exports = JewelryType;

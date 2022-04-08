@@ -19,6 +19,6 @@ const LogoSchema = new Schema(
     }
 
 )
-const Logo = model('InspirationalImage', LogoSchema);
+const Logo = model('Logo', LogoSchema);
 
 module.exports = Logo;

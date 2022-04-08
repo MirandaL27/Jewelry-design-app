@@ -1,5 +1,4 @@
-const { Schema, model } = require('mongoose');
-//TODO: finish this schema! 
+const { Schema, model } = require('mongoose'); 
 const ShopSchema = new Schema(
     {
         shopName: {
@@ -29,5 +28,5 @@ const ShopSchema = new Schema(
 
 )
 
-const Shop = model('InspirationalImage', ShopSchema);
+const Shop = model('Shop', ShopSchema);
 module.exports = Shop;

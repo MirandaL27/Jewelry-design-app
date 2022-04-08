@@ -13,5 +13,5 @@ const StoneSchema = new Schema(
     }
 
 )
-const Stone = model('InspirationalImage', StoneSchema);
+const Stone = model('Stone', StoneSchema);
 module.exports = Stone;

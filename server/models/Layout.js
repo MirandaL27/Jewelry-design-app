@@ -154,6 +154,6 @@ const LayoutSchema = new Schema(
 
 )
 
-const Layout = model('InspirationalImage', LayoutSchema);
+const Layout = model('Layout', LayoutSchema);
 
 module.exports = Layout;

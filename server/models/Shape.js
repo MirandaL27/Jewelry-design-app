@@ -11,5 +11,5 @@ const ShapeSchema = new Schema(
 
 )
 
-const Shape = model('InspirationalImage', ShapeSchema);
+const Shape = model('Shape', ShapeSchema);
 module.exports = Shape;

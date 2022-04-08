@@ -19,6 +19,6 @@ const ColorSchema = new Schema(
 
 )
 
-const Color = model('InspirationalImage', ColorSchema);
+const Color = model('Color', ColorSchema);
 
 module.exports = Color;

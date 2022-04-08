@@ -13,6 +13,6 @@ const MaterialSchema = new Schema(
     }
 
 )
-const Material = model('InspirationalImage', MaterialSchema);
+const Material = model('Material', MaterialSchema);
 
 module.exports = Material;

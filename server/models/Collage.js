@@ -73,6 +73,6 @@ const CollageSchema = new Schema(
     }
 
 )
-const Collage = model('InspirationalImage', CollageSchema);
+const Collage = model('Collage', CollageSchema);
 
 module.exports = Collage;

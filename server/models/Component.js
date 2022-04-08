@@ -88,6 +88,6 @@ const ComponentSchema = new Schema(
 
 )
 
-const Component = model('InspirationalImage', ComponentSchema);
+const Component = model('Component', ComponentSchema);
 
 module.exports = Component;
