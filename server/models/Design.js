@@ -69,6 +69,19 @@ DesignSchema.virtual("totalQuantity").get(function() {
     return minQuantity;
 });
 
+DesignSchema.virtual("totalMaxQuantity").get(function() {
+    let minQuantity = Number.MAX_SAFE_INTEGER;
+    this.components.forEach(component => {
+        if(component.maxQuantity < minQuantity){
+            minQuantity = component.maxQuantity;
+        }
+    });
+    if(this.jewelryType === "Earrings"){
+        minQuantity = minQuantity/2;
+    }
+    return minQuantity;
+});
+
 DesignSchema.virtual("soldOut").get(function() {
     let soldOut = false;
     this.components.forEach(component => {
