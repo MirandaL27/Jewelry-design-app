@@ -20,7 +20,7 @@ const ShopSchema = new Schema(
         numberOfSales: {
             type: Number
         },
-        updated_at: {
+        updatedAt: {
             type: Date,
             default: Date.now,
             get: timestamp => dateFormat(timestamp)
