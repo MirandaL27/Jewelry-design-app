@@ -378,7 +378,7 @@ input StyleInput {
     AddShop(input: ShopInput): Shop
     AddStone(type: String!, pricePerOunce: Number): Stone
     AddStyle(input: StyleInput): Style
-    updateShop(input: ShopInput): Shop
+    UpdateShop(input: ShopInput): Shop
   }
 `;
 
