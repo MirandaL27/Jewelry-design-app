@@ -362,22 +362,23 @@ input StyleInput {
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    AddCollage(): Collage
+    AddCollage(input: CollageInput): Collage
     AddColor(name: String!, hex: String!, rgb: String): Color
-    AddComponent(): Component
+    AddComponent(input: ComponentInput): Component
     AddComponentType(componentType: String!): ComponentType
     AddCountryName(countryName: String!): Country
-    AddDesign(): Design
-    AddImage(): InspirationalImage
+    AddDesign(input: DesignInput): Design
+    AddImage(input: InspirationalImageInput): InspirationalImage
     AddJewelryType(jewelryType: String!): JewelryType
-    AddLayout(): Layout
-    AddLogo(): Logo
+    AddLayout(input: LayoutInput): Layout
+    UpdateLayout(input: LayoutInput): Layout
+    AddLogo(input: Logo): Logo
     AddMaterial(type: String!, pricePerOunce: Number): Material
     AddShape(type: String!): Shape
-    AddShop(): Shop
+    AddShop(input: ShopInput): Shop
     AddStone(type: String!, pricePerOunce: Number): Stone
-    AddStyle(): Style
-    updateShop(): Shop
+    AddStyle(input: StyleInput): Style
+    updateShop(input: ShopInput): Shop
   }
 `;
 
