@@ -2,6 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const StyleSchema = new Schema(
     {
+        _id: {
+            type: ID,
+            required: true
+        },
         type: {
             type: String,
             required: true,

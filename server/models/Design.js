@@ -2,6 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const DesignSchema = new Schema(
     {
+        _id: {
+           type: ID,
+           required: true
+        },
         designName: {
             type: String,
             required: true,
@@ -10,7 +14,8 @@ const DesignSchema = new Schema(
         components: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "Component"
+                ref: "Component",
+                required: true
             }
         ],
         jewelryType: {

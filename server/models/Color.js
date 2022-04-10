@@ -2,6 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const ColorSchema = new Schema(
     {
+        _id: {
+            type: ID,
+            required: true
+        },
         name: {
             type: String,
             required: true,

@@ -1,6 +1,10 @@
 const { Schema, model } = require('mongoose'); 
 const ShopSchema = new Schema(
     {
+        _id: {
+            type: ID,
+            required: true
+        },
         shopName: {
             type: String,
             required: true,

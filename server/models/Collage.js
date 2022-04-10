@@ -10,7 +10,8 @@ const CollageSchema = new Schema(
         },
         collageLayout: {
             type: Schema.Types.ObjectId,
-            ref: "Layout"
+            ref: "Layout",
+            required: true
         },
         roundedCorners: {
             type: Boolean,
@@ -68,7 +69,8 @@ const CollageSchema = new Schema(
         images: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "InspirationalImage"
+                ref: "InspirationalImage",
+                required: true
             }
         ],
         imagePositions: [

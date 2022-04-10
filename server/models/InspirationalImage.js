@@ -2,6 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const InspirationalImageSchema = new Schema(
     {
+        _id: {
+            type: ID,
+            required: true
+        },
         name: {
             type: String,
             required: true,
@@ -22,7 +26,7 @@ const InspirationalImageSchema = new Schema(
         accountName: {
             type: String
         },
-        Type: {
+        type: {
             type: Schema.Types.ObjectId,
             ref: 'JewelryType',
             required: true
