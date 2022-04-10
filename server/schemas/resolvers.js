@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Collage, Color, Component, ComponentType, Country, Design, InspirationalImage, JewelryType, Layout, Logo, Material, Shape, Shop, Stone, Style } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -14,70 +14,202 @@ const resolvers = {
         throw new AuthenticationError('Not logged in');
       },
       getCollage: async (parent, args, context) => {
-
+        try{
+          const collageData = await Collage.findOne({_id: args._id});
+          return collageData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getColors: async (parent, args, context) => {
-
+        try{
+          const colorData = await Color.find({});
+          return colorData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getColorById: async (parent, args, context) => {
-
+        try{
+          const colorData = await Color.findOne({_id: args._id});
+        return colorData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getComponentById: async (parent, args, context) => {
-
+        try{
+          const componentData = await Component.findOne({_id: args_id});
+          return componentData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getComponents: async (parent, args, context) => {
-
+        try{
+          const componentData = await Component.find({});
+          return componentData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getComponentTypes: async (parent, args, context) => {
-
+        try{
+          const compTypeData = await ComponentType.find({});
+          return compTypeData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getcountryNames: async (parent, args, context) => {
-
+        try{
+          const namesData = await Country.find({});
+          return namesData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getDesignById : async (parent, args, context) => {
-
+        try{
+          const designData = await Design.findOne({_id: args_id});
+          return designData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getDesigns: async (parent, args, context) => {
-        
+        try{
+          const design = await Design.find({});
+          return design;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getImages: async (parent, args, context) => {
-
+        try{
+          const imageData = await InspirationalImage.find({});
+          return imageData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getImagesById: async (parent, args, context) => {
-
+        try{
+          const imageData = await InspirationalImage.findOne({_id: args_id});
+          return imageData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getJewelryTypes: async (parent, args, context) => {
-
+        try{
+          const jewelryTypeData = await JewelryType.find({});
+          return jewelryTypeData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getLayouts: async (parent, args, context) => {
-
+        try{
+          const layoutData = await Layout.find({});
+          return layoutData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getLogos: async (parent, args, context) => {
-
+        try{
+          const logoData = await Logo.find({});
+          return logoData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getLogoById: async (parent, args, context) => {
-
+        try{
+          const logoData = await Logo.findOne({_id: args_id});
+          return logoData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getMaterials: async (parent, args, context) => {
-
+        try{
+          const materialData = await Material.find({});
+          return materialData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getShapes: async (parent, args, context) => {
-
+        try{
+          const shapeData = await Shape.find({});
+          return shapeData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getShops: async (parent, args, context) => {
-
+        try{
+          const shopData = await Shop.find({});
+          return shopData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getShopById: async (parent, args, context) => {
-
+        try{
+          const shopData = await Shop.findOne({_id: args._id});
+          return shopData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getStones: async (parent, args, context) => {
-
+        try{
+          const stoneData = await Stone.find({});
+          return stoneData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getStyles: async (parent, args, context) => {
-
+        try{
+          const styleData = await Style.find({});
+          return styleData;
+        }
+        catch(e){
+          console.log(e);
+        }
       },
       getStyleById: async (parent, args, context) => {
-
+        try{
+          const styleData = await Style.findOne({_id: args._id});
+          return styleData;
+        }
+        catch(e){
+          console.log(e);
+        }
       }
     },
     Mutation: {

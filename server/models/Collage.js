@@ -3,6 +3,10 @@ const { Schema, model } = require('mongoose');
 
 const CollageSchema = new Schema(
     {
+        _id: {
+            type: ID,
+            required: true
+        },
         collageName: {
             type: String,
             required: true,

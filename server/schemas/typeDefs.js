@@ -21,6 +21,7 @@ type User {
 }
 
 type Collage {
+  _id: ID
   collageName: String
   collageLayout: Layout
   roundedCorners: Boolean
@@ -197,6 +198,7 @@ type Style{
 }
 
 input CollageInput {
+  _id: ID!
   collageName: String!
   collageLayout: Layout!
   roundedCorners: Boolean
@@ -335,28 +337,28 @@ input StyleInput {
 
   type Query {
     me: User
-    getCollage: Collage
+    getCollage(_id: ID!): Collage
     getColors: [Color]
-    getColorById: Color
-    getComponentById: Component
+    getColorById(_id: ID!): Color
+    getComponentById(_id: ID!): Component
     getComponents: [Component]
     getComponentTypes: [ComponentType]
     getCountryNames: [Country]
-    getDesignById: Design
+    getDesignById(_id: ID!): Design
     getDesigns: [Designs]
     getImages: [InspirationalImage]
-    getImageById: InspirationalImage
+    getImageById(_id: ID!): InspirationalImage
     getJewelryTypes: [JewelryType]
     getLayouts: [Layout]
     getLogos: [Logo]
-    getLogoById: Logo
+    getLogoById(_id: ID!): Logo
     getMaterials: [Material]
     getShapes: [Shape]
     getShops: [Shop]
-    getShopById: Shop
+    getShopById(_id: ID!): Shop
     getStones: [Stone]
     getStyles: [Style]
-    getStyleById: Style
+    getStyleById(_id: ID!): Style
   }
 
   type Mutation {
