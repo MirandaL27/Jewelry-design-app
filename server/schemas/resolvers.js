@@ -351,8 +351,11 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!');
       },
       UpdateLayout: async (parent, {id, input}, context) => {
-        const layoutData = await Layout.findByIdAndUpdate(id, input, { new: true, runValidators: true });
-        return layoutData;
+        if(context.user){
+          const layoutData = await Layout.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return layoutData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
       AddLogo: async (parent, {input}, context) => {
         if(context.user){
@@ -410,8 +413,11 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!');
       },
       UpdateShop: async (parent, {id, input}) => {
-        const shopData = await Shop.findByIdAndUpdate(id, input, { new: true, runValidators: true });
-        return shopData;
+        if(context.user){
+          const shopData = await Shop.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return shopData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       }
     }
   };
