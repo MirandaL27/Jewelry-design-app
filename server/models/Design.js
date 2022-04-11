@@ -2,10 +2,6 @@ const { Schema, model } = require('mongoose');
 
 const DesignSchema = new Schema(
     {
-        _id: {
-           type: ID,
-           required: true
-        },
         designName: {
             type: String,
             required: true,

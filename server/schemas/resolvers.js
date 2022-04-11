@@ -67,7 +67,7 @@ const resolvers = {
           console.log(e);
         }
       },
-      getcountryNames: async (parent, args, context) => {
+      getCountryNames: async (parent, args, context) => {
         try{
           const namesData = await Country.find({userId: { $in: [context.user._id, null] }});
           return namesData;
@@ -103,7 +103,7 @@ const resolvers = {
           console.log(e);
         }
       },
-      getImagesById: async (parent, args, context) => {
+      getImageById: async (parent, args, context) => {
         try{
           const imageData = await InspirationalImage.findOne({_id: args_id});
           return imageData;
@@ -255,9 +255,9 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      AddColor: async (parent, args, context) => {
+      AddColor: async (parent, {input}, context) => {
         if(context.user){
-          const color = await Color.create({name: args.name, hex: args.hex, rgb: args.rgb, user_id: context.user._id});
+          const color = await Color.create(input);
           return color;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -282,16 +282,16 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      AddComponentType: async (parent, args, context) => {
+      AddComponentType: async (parent, {input}, context) => {
         if(context.user){
-          const compTypeData = await ComponentType.create({componentType: args.componentType, user_id: context.user._id});
+          const compTypeData = await ComponentType.create(input);
           return compTypeData;
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      AddCountryName: async (parent, args, context) => {
+      AddCountryName: async (parent, {input}, context) => {
         if(context.user){
-          const countryName = await Country.create({countryName: args.countryName, user_id: context.user._id});
+          const countryName = await Country.create(input);
           return countryName;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -336,9 +336,9 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      AddJewelryType: async (parent, args, context) => {
+      AddJewelryType: async (parent, {input}, context) => {
         if(context.user){
-          const jewelryTypeData = await JewelryType.create({jewleryType: args.jewelryType, user_id: context.user._id});
+          const jewelryTypeData = await JewelryType.create(input);
           return jewelryTypeData;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -373,16 +373,16 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      AddMaterial: async (parent, args, context) => {
+      AddMaterial: async (parent, {input}, context) => {
         if(context.user){
-          const materialData = await Material.create({type: args.type, pricePerOunce: args.pricePerOunce, user_id: context.user._id});
+          const materialData = await Material.create(input);
           return materialData;
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      AddShape: async (parent, args, context) => {
+      AddShape: async (parent, {input}, context) => {
         if(context.user){
-          const shapeData = await Shape.create({type: args.type, user_id: context.user._id});
+          const shapeData = await Shape.create(input);
           return shapeData;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -394,9 +394,9 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      AddStone: async (parent, args, context) => {
+      AddStone: async (parent, {input}, context) => {
         if(context.user){
-          const stoneData = await Stone.create({type: args.type, pricePerOunce: args.pricePerOunce, user_id: context.user._id});
+          const stoneData = await Stone.create(input);
           return stoneData;
         }
         throw new AuthenticationError('You need to be logged in!');

@@ -9,6 +9,7 @@ type Auth {
   user: User
 }
 
+
 type User {
   _id: ID
   username: String
@@ -27,9 +28,9 @@ type Collage {
   roundedCorners: Boolean
   circularPhotos: Boolean
   padding: Boolean 
-  paddingThickness: Number
+  paddingThickness: Int
   border: Boolean
-  borderThickness: Number
+  borderThickness: Int
   borderColor: String
   shadow: Boolean
   shadowColor: String
@@ -40,7 +41,7 @@ type Collage {
   font: String
   backgroundColor: String
   images: [InspirationalImage]
-  imagePositions: [Number]
+  imagePositions: [Int]
   titleText: String
 }
 
@@ -63,12 +64,12 @@ type Component {
   shape: Shape
   size: String
   weight: String
-  price: Number
-  quantity: Number
-  maxPrice: Number
-  maxQuantity: Number
+  price: Float
+  quantity: Int
+  maxPrice: Float
+  maxQuantity: Int
   freeShipping: Boolean
-  shippingPrice: Number
+  shippingPrice: Float
   shippingTime: String
   colors: [Color]
   link: String
@@ -77,7 +78,7 @@ type Component {
   shopName: String
   soldOut: Boolean
   bestSeller: Boolean
-  likeRating: Number
+  likeRating: Int
 }
 
 type ComponentType {
@@ -95,12 +96,12 @@ type Design {
   designName: String
   components: [Component]
   jewelryType: JewelryType
-  likeRating: Number
+  likeRating: Int
   colors: [Color]
   style: Style
 }
 
-type inspirationalImage {
+type InspirationalImage {
   _id: ID
   name: String
   imageLink: String
@@ -108,12 +109,12 @@ type inspirationalImage {
   artist: String
   accountName: String
   Type: JewelryType
-  price: Number
-  likeRating: Number
+  price: Float
+  likeRating: Int
   colors: [Color]
   user: User
   etsyShop: Shop
-  createdAt: Date
+  createdAt: String
 }
 
 type JewelryType{
@@ -124,54 +125,54 @@ type JewelryType{
 type Layout{
   name: String
   user_id: ID
-  cell1: Number
-  cell2: Number
-  cell3: Number
-  cell4: Number
-  cell5: Number
-  cell6: Number
-  cell7: Number
-  cell8: Number
-  cell9: Number
-  cell10: Number
-  cell11: Number
-  cell12: Number
-  cell13: Number
-  cell14: Number
-  cell15: Number
-  cell16: Number
-  cell17: Number
-  cell18: Number
-  cell19: Number
-  cell20: Number
-  cell21: Number
-  cell22: Number
-  cell23: Number
-  cell24: Number
-  cell25: Number
-  cell26: Number
-  cell27: Number
-  cell28: Number
-  cell29: Number
-  cell30: Number
-  cell31: Number
-  cell32: Number
-  cell33: Number
-  cell34: Number
-  cell35: Number
-  cell36: Number
+  cell1: Int
+  cell2: Int
+  cell3: Int
+  cell4: Int
+  cell5: Int
+  cell6: Int
+  cell7: Int
+  cell8: Int
+  cell9: Int
+  cell10: Int
+  cell11: Int
+  cell12: Int
+  cell13: Int
+  cell14: Int
+  cell15: Int
+  cell16: Int
+  cell17: Int
+  cell18: Int
+  cell19: Int
+  cell20: Int
+  cell21: Int
+  cell22: Int
+  cell23: Int
+  cell24: Int
+  cell25: Int
+  cell26: Int
+  cell27: Int
+  cell28: Int
+  cell29: Int
+  cell30: Int
+  cell31: Int
+  cell32: Int
+  cell33: Int
+  cell34: Int
+  cell35: Int
+  cell36: Int
 }
 
 type Logo {
   _id: ID
   logoName: String
   link: String
-  colors: [Colors]
+  colors: [Color]
 }
 
 type Material {
   type: String
-  pricePerOunce: Number
+  pricePerOunce: Float
   user_id: ID
 }
 
@@ -184,15 +185,15 @@ type Shop{
   _id: ID
   shopName: String
   ownerName: String
-  shopRating: Number
+  shopRating: Float
   link: String
-  numberOfSales: Number
-  updatedAt: Date
+  numberOfSales: Int
+  updatedAt: String
 }
 
 type Stone{
   type: String
-  pricePerOunce: Number
+  pricePerOunce: Float
   user_id: ID
 }
 
@@ -209,13 +210,13 @@ type Style{
 input CollageInput {
   _id: ID!
   collageName: String!
-  collageLayout: Layout!
+  collageLayout: LayoutInput!
   roundedCorners: Boolean
   circularPhotos: Boolean
   padding: Boolean
-  paddingThickness: Number
+  paddingThickness: Int
   border: Boolean
-  borderThickness: Number
+  borderThickness: Int
   borderColor: String
   shadow: Boolean
   shadowColor: String
@@ -225,116 +226,155 @@ input CollageInput {
   title: Boolean
   font: String
   backgroundColor: String
-  images: [InspirationalImage]!
-  imagepositions [Number]!
+  images: [InspirationalImageInput]!
+  imagePositions: [Int]!
   titleText: String
+}
+
+input ColorInput {
+  name: String!
+  hex: String!
+  rgb: String
+  user_id: ID!
 }
 
 input ComponentInput {
   componentName: String!
-  componentType: ComponentType!
-  style: Style!
-  material: Material
-  stoneType: Stone
-  countryOfOrigin: Country
-  shape: Shape
+  componentType: ComponentTypeInput!
+  style: StyleInput!
+  material: MaterialInput
+  stoneType: StoneInput
+  countryOfOrigin: CountryInput
+  shape: ShapeInput
   size: String
   weight: String
-  price: Number!
-  quantity: Number
-  maxPrice: Number
-  maxQuantity: Number
+  price: Float!
+  quantity: Int
+  maxPrice: Float
+  maxQuantity: Int
   freeShipping: Boolean
-  shippingPrice: Number
+  shippingPrice: Float
   shippingTime: String
-  colors: [Color]
+  colors: [ColorInput]
   link: String!
   photoLink: String!
   etsyItemName: String
   shopName: String
   soldOut: Boolean
   bestSeller: Boolean
-  likeRating: Number!
+  likeRating: Int!
+}
+
+input ComponentTypeInput {
+  componentType: String!
+  user_id: ID!
+}
+
+input CountryInput {
+  countryName: String!
+  user_id: ID!
 }
 
 input DesignInput {
   designName: String!
-  components: [Components]!
-  jewelryType: JewelryType
-  likeRating: Number!
-  colors: [Color],
-  style: Style
+  components: [ComponentInput]!
+  jewelryType: JewelryTypeInput
+  likeRating: Int!
+  colors: [ColorInput],
+  style: StyleInput
 }
 
 input InspirationalImageInput {
   name: String!
   imageLink: String!
-  style: Style
+  style: StyleInput
   artist: String
   accountName: String
-  type: JewelryType!
-  price: Number
-  likeRating: Number!
-  colors: [Color]
+  type: JewelryTypeInput!
+  price: Float
+  likeRating: Int!
+  colors: [ColorInput]
   user: ID
-  etsyShop: Shop
-  createdAt: Date
+  etsyShop: ShopInput
+  createdAt: String
+}
+
+input JewelryTypeInput{
+  jewelryType: String!
+  user_id: ID!
 }
 
 input LayoutInput {
   name: String!
   user_id: ID!
-  cell1: Number!
-  cell2: Number!
-  cell3: Number!
-  cell4: Number!
-  cell5: Number!
-  cell6: Number!
-  cell7: Number!
-  cell8: Number!
-  cell9: Number!
-  cell10: Number!
-  cell11: Number!
-  cell12: Number!
-  cell13: Number!
-  cell14: Number!
-  cell15: Number!
-  cell16: Number!
-  cell17: Number!
-  cell18: Number!
-  cell19: Number!
-  cell20: Number!
-  cell21: Number!
-  cell22: Number!
-  cell23: Number!
-  cell24: Number!
-  cell25: Number!
-  cell26: Number!
-  cell27: Number!
-  cell28: Number!
-  cell29: Number!
-  cell30: Number!
-  cell31: Number!
-  cell32: Number!
-  cell33: Number!
-  cell34: Number!
-  cell35: Number!
-  cell36: Number!
+  cell1: Int!
+  cell2: Int!
+  cell3: Int!
+  cell4: Int!
+  cell5: Int!
+  cell6: Int!
+  cell7: Int!
+  cell8: Int!
+  cell9: Int!
+  cell10: Int!
+  cell11: Int!
+  cell12: Int!
+  cell13: Int!
+  cell14: Int!
+  cell15: Int!
+  cell16: Int!
+  cell17: Int!
+  cell18: Int!
+  cell19: Int!
+  cell20: Int!
+  cell21: Int!
+  cell22: Int!
+  cell23: Int!
+  cell24: Int!
+  cell25: Int!
+  cell26: Int!
+  cell27: Int!
+  cell28: Int!
+  cell29: Int!
+  cell30: Int!
+  cell31: Int!
+  cell32: Int!
+  cell33: Int!
+  cell34: Int!
+  cell35: Int!
+  cell36: Int!
 }
 
 input LogoInput {
   logoName: String!
   link: String!
-  colors: [Color]
+  colors: [ColorInput]
+}
+
+input MaterialInput {
+  type: String!
+  pricePerOunce: Float
+  user_id: ID!
+}
+
+input ShapeInput{
+  type: String!
+  user_id: ID!
 }
 
 input ShopInput {
   shopName: String!
   ownerName: String
-  shopRating: Number
+  shopRating: Float
   link: String
-  numberOfSales: Number
-  updatedAt: Date
+  numberOfSales: Int
+  updatedAt: String
+}
+
+input StoneInput{
+  type: String!
+  pricePerOunce: Float
+  user_id: ID!
 }
 
 input StyleInput {
@@ -346,50 +386,49 @@ input StyleInput {
   user_id: ID!
 }
 
-  type Query {
-    me: User
-    getCollage(_id: ID!): Collage
-    getColors(userId: ID!): [Color]
-    getColorById(_id: ID!): Color
-    getComponentById(_id: ID!): Component
-    getComponents: [Component]
-    getComponentTypes(userId: ID!): [ComponentType]
-    getCountryNames(userId: ID!): [Country]
-    getDesignById(_id: ID!): Design
-    getDesigns: [Designs]
-    getImages: [InspirationalImage]
-    getImageById(_id: ID!): InspirationalImage
-    getJewelryTypes(userId: ID!): [JewelryType]
-    getLayouts(userId: ID!): [Layout]
-    getLogos: [Logo]
-    getLogoById(_id: ID!): Logo
-    getMaterials(userId: ID!): [Material]
-    getShapes(userId: ID!): [Shape]
-    getShops: [Shop]
-    getShopById(_id: ID!): Shop
-    getStones(userId: ID!): [Stone]
-    getStyles(userId: ID!): [Style]
-    getStyleById(_id: ID!): Style
-  }
-
+type Query {
+  me: User
+  getCollage(_id: ID!): Collage
+  getColors(userId: ID!): [Color]
+  getColorById(_id: ID!): Color
+  getComponentById(_id: ID!): Component
+  getComponents: [Component]
+  getComponentTypes(userId: ID!): [ComponentType]
+  getCountryNames(userId: ID!): [Country]
+  getDesignById(_id: ID!): Design
+  getDesigns: [Design]
+  getImages: [InspirationalImage]
+  getImageById(_id: ID!): InspirationalImage
+  getJewelryTypes(userId: ID!): [JewelryType]
+  getLayouts(userId: ID!): [Layout]
+  getLogos: [Logo]
+  getLogoById(_id: ID!): Logo
+  getMaterials(userId: ID!): [Material]
+  getShapes(userId: ID!): [Shape]
+  getShops: [Shop]
+  getShopById(_id: ID!): Shop
+  getStones(userId: ID!): [Stone]
+  getStyles(userId: ID!): [Style]
+  getStyleById(_id: ID!): Style
+}
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     AddCollage(input: CollageInput): Collage
-    AddColor(name: String!, hex: String!, rgb: String, user_id: ID!): Color
+    AddColor(input: ColorInput): Color
     AddComponent(input: ComponentInput): Component
-    AddComponentType(componentType: String!, user_id: ID!): ComponentType
-    AddCountryName(countryName: String!, user_id: ID!): Country
+    AddComponentType(input: ComponentTypeInput): ComponentType
+    AddCountryName(input: CountryInput): Country
     AddDesign(input: DesignInput): Design
     AddImage(input: InspirationalImageInput): InspirationalImage
-    AddJewelryType(jewelryType: String!, user_id: ID!): JewelryType
+    AddJewelryType(input: JewelryTypeInput): JewelryType
     AddLayout(input: LayoutInput): Layout
     UpdateLayout(input: LayoutInput): Layout
-    AddLogo(input: Logo): Logo
-    AddMaterial(type: String!, pricePerOunce: Number, user_id: ID!): Material
-    AddShape(type: String!, user_id: ID!): Shape
+    AddLogo(input: LogoInput): Logo
+    AddMaterial(input: MaterialInput): Material
+    AddShape(input: ShapeInput): Shape
     AddShop(input: ShopInput): Shop
-    AddStone(type: String!, pricePerOunce: Number, user_id: ID!): Stone
+    AddStone(input: StoneInput): Stone
     AddStyle(input: StyleInput): Style
     UpdateShop(input: ShopInput): Shop
   }

@@ -2,10 +2,6 @@ const { Schema, model } = require('mongoose');
 
 const ComponentSchema = new Schema(
     {
-        _id: {
-            type: ID,
-            required: true
-        },
         componentName: {
             type: String,
             required: true,

@@ -2,10 +2,6 @@ const { Schema, model } = require('mongoose');
 
 const ColorSchema = new Schema(
     {
-        _id: {
-            type: ID,
-            required: true
-        },
         user_id: {
             type: Schema.Types.ObjectId,
             ref: 'User'

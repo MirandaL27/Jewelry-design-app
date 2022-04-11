@@ -2,10 +2,6 @@ const { Schema, model } = require('mongoose');
 
 const InspirationalImageSchema = new Schema(
     {
-        _id: {
-            type: ID,
-            required: true
-        },
         name: {
             type: String,
             required: true,

@@ -2,10 +2,6 @@ const { Schema, model } = require('mongoose');
 
 const LogoSchema = new Schema(
     {
-        _id: {
-            type: ID,
-            required: true
-        },
         logoName: {
             type: String,
             required: true,
