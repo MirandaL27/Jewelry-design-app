@@ -26,6 +26,10 @@ const StyleSchema = new Schema(
         notes: {
             type: String,
             trim: true
+        },
+        user_id: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
         }
     }
 

@@ -24,7 +24,7 @@ const resolvers = {
       },
       getColors: async (parent, args, context) => {
         try{
-          const colorData = await Color.find({});
+          const colorData = await Color.find({userId: { $in: [context.user._id, null] }});
           return colorData;
         }
         catch(e){
@@ -60,7 +60,7 @@ const resolvers = {
       },
       getComponentTypes: async (parent, args, context) => {
         try{
-          const compTypeData = await ComponentType.find({});
+          const compTypeData = await ComponentType.find({userId: { $in: [context.user._id, null] }});
           return compTypeData;
         }
         catch(e){
@@ -69,7 +69,7 @@ const resolvers = {
       },
       getcountryNames: async (parent, args, context) => {
         try{
-          const namesData = await Country.find({});
+          const namesData = await Country.find({userId: { $in: [context.user._id, null] }});
           return namesData;
         }
         catch(e){
@@ -114,7 +114,7 @@ const resolvers = {
       },
       getJewelryTypes: async (parent, args, context) => {
         try{
-          const jewelryTypeData = await JewelryType.find({});
+          const jewelryTypeData = await JewelryType.find({userId: { $in: [context.user._id, null] }});
           return jewelryTypeData;
         }
         catch(e){
@@ -123,7 +123,7 @@ const resolvers = {
       },
       getLayouts: async (parent, args, context) => {
         try{
-          const layoutData = await Layout.find({});
+          const layoutData = await Layout.find({userId: { $in: [context.user._id, null] }});
           return layoutData;
         }
         catch(e){
@@ -150,7 +150,7 @@ const resolvers = {
       },
       getMaterials: async (parent, args, context) => {
         try{
-          const materialData = await Material.find({});
+          const materialData = await Material.find({userId: { $in: [context.user._id, null] }});
           return materialData;
         }
         catch(e){
@@ -159,7 +159,7 @@ const resolvers = {
       },
       getShapes: async (parent, args, context) => {
         try{
-          const shapeData = await Shape.find({});
+          const shapeData = await Shape.find({userId: { $in: [context.user._id, null] }});
           return shapeData;
         }
         catch(e){
@@ -186,7 +186,7 @@ const resolvers = {
       },
       getStones: async (parent, args, context) => {
         try{
-          const stoneData = await Stone.find({});
+          const stoneData = await Stone.find({userId: { $in: [context.user._id, null] }});
           return stoneData;
         }
         catch(e){
@@ -195,7 +195,7 @@ const resolvers = {
       },
       getStyles: async (parent, args, context) => {
         try{
-          const styleData = await Style.find({});
+          const styleData = await Style.find({userId: { $in: [context.user._id, null] }});
           return styleData;
         }
         catch(e){

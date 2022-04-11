@@ -6,6 +6,10 @@ const LayoutSchema = new Schema(
             type: String,
             required: true
         },
+        user_id: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        },
         cell1: {
             type: Number,
             required: true

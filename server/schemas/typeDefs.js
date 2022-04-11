@@ -49,6 +49,7 @@ type Color {
   name: String
   hex: String
   rgb: String
+  user_id: ID
 }
 
 type Component {
@@ -81,10 +82,12 @@ type Component {
 
 type ComponentType {
   componentType: String
+  user_id: ID
 }
 
 type Country {
   countryName: String
+  user_id: ID
 }
 
 type Design {
@@ -115,10 +118,12 @@ type inspirationalImage {
 
 type JewelryType{
   jewelryType: String
+  user_id: ID
 }
 
 type Layout{
   name: String
+  user_id: ID
   cell1: Number
   cell2: Number
   cell3: Number
@@ -167,10 +172,12 @@ type Logo {
 type Material {
   type: String
   pricePerOunce: Number
+  user_id: ID
 }
 
 type Shape{
   type: String
+  user_id: ID
 }
 
 type Shop{
@@ -186,6 +193,7 @@ type Shop{
 type Stone{
   type: String
   pricePerOunce: Number
+  user_id: ID
 }
 
 type Style{
@@ -195,6 +203,7 @@ type Style{
   styleElements: String
   timePeriod: String
   notes: String
+  user_id: ID
 }
 
 input CollageInput {
@@ -274,6 +283,7 @@ input InspirationalImageInput {
 
 input LayoutInput {
   name: String!
+  user_id: ID!
   cell1: Number!
   cell2: Number!
   cell3: Number!
@@ -333,31 +343,32 @@ input StyleInput {
   styleElements: String
   timePeriod: String
   notes: String
+  user_id: ID!
 }
 
   type Query {
     me: User
     getCollage(_id: ID!): Collage
-    getColors: [Color]
+    getColors(userId: ID!): [Color]
     getColorById(_id: ID!): Color
     getComponentById(_id: ID!): Component
     getComponents: [Component]
-    getComponentTypes: [ComponentType]
-    getCountryNames: [Country]
+    getComponentTypes(userId: ID!): [ComponentType]
+    getCountryNames(userId: ID!): [Country]
     getDesignById(_id: ID!): Design
     getDesigns: [Designs]
     getImages: [InspirationalImage]
     getImageById(_id: ID!): InspirationalImage
-    getJewelryTypes: [JewelryType]
-    getLayouts: [Layout]
+    getJewelryTypes(userId: ID!): [JewelryType]
+    getLayouts(userId: ID!): [Layout]
     getLogos: [Logo]
     getLogoById(_id: ID!): Logo
-    getMaterials: [Material]
-    getShapes: [Shape]
+    getMaterials(userId: ID!): [Material]
+    getShapes(userId: ID!): [Shape]
     getShops: [Shop]
     getShopById(_id: ID!): Shop
-    getStones: [Stone]
-    getStyles: [Style]
+    getStones(userId: ID!): [Stone]
+    getStyles(userId: ID!): [Style]
     getStyleById(_id: ID!): Style
   }
 

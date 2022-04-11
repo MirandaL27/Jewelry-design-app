@@ -9,6 +9,10 @@ const MaterialSchema = new Schema(
         },
         pricePerOunce: {
             type: Number,
+        },
+        user_id: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
         }
     }
 

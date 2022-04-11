@@ -6,6 +6,10 @@ const ColorSchema = new Schema(
             type: ID,
             required: true
         },
+        user_id: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        },
         name: {
             type: String,
             required: true,
