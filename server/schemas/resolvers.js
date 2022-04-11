@@ -350,8 +350,9 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      UpdateLayout: async (parent, {input}, context) => {
-        //TODO: finish this resolver!!
+      UpdateLayout: async (parent, {id, input}, context) => {
+        const layoutData = await Layout.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+        return layoutData;
       },
       AddLogo: async (parent, {input}, context) => {
         if(context.user){
@@ -408,8 +409,9 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      UpdateShop: async (parent, args) => {
-        //TODO: finish this resolver!!
+      UpdateShop: async (parent, {id, input}) => {
+        const shopData = await Shop.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+        return shopData;
       }
     }
   };

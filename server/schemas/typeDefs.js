@@ -423,14 +423,14 @@ type Query {
     AddImage(input: InspirationalImageInput): InspirationalImage
     AddJewelryType(input: JewelryTypeInput): JewelryType
     AddLayout(input: LayoutInput): Layout
-    UpdateLayout(input: LayoutInput): Layout
+    UpdateLayout(id: ID!, input: LayoutInput): Layout
     AddLogo(input: LogoInput): Logo
     AddMaterial(input: MaterialInput): Material
     AddShape(input: ShapeInput): Shape
     AddShop(input: ShopInput): Shop
     AddStone(input: StoneInput): Stone
     AddStyle(input: StyleInput): Style
-    UpdateShop(input: ShopInput): Shop
+    UpdateShop(id: ID!, input: ShopInput): Shop
   }
 `;
 
