@@ -235,59 +235,181 @@ const resolvers = {
         const token = signToken(user);
         return { token, user };
       },
-      AddCollage: async (parent, args) => {
-
+      AddCollage: async (parent, {input}, context) => {
+        if(context.user){
+          const collage = await Collage.create(input);
+          //need to update the user collage array
+          const updatedUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { savedCollages: collage._id } },
+            { new: true, runValidators: true }
+          )
+            .populate({
+              path: 'savedCollages',
+              select: '-__v'
+            })
+  
+          console.log(updatedUser);
+  
+          return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddColor: async (parent, args) => {
-
+      AddColor: async (parent, args, context) => {
+        if(context.user){
+          const color = await Color.create({name: args.name, hex: args.hex, rgb: args.rgb, user_id: context.user._id});
+          return color;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddComponent: async (parent, args) => {
-
+      AddComponent: async (parent, {input}, context) => {
+        if(context.user){
+          const component = await Component.create(input);
+          //need to update the user component array
+          const updatedUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { userComponents: component._id } },
+            { new: true, runValidators: true }
+          )
+            .populate({
+              path: 'userComponents',
+              select: '-__v'
+            })
+  
+          console.log(updatedUser);
+  
+          return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddComponentType: async (parent, args) => {
-
+      AddComponentType: async (parent, args, context) => {
+        if(context.user){
+          const compTypeData = await ComponentType.create({componentType: args.componentType, user_id: context.user._id});
+          return compTypeData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddCountryName: async (parent, args) => {
-
+      AddCountryName: async (parent, args, context) => {
+        if(context.user){
+          const countryName = await Country.create({countryName: args.countryName, user_id: context.user._id});
+          return countryName;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddDesign: async (parent, args) => {
-
+      AddDesign: async (parent, {input}, context) => {
+        if(context.user){
+          const design = await Design.create(input);
+          //need to update the user design array
+          const updatedUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { savedDesigns: design._id } },
+            { new: true, runValidators: true }
+          )
+            .populate({
+              path: 'savedDesigns',
+              select: '-__v'
+            })
+  
+          console.log(updatedUser);
+  
+          return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddImage: async (parent, args) => {
-
+      AddImage: async (parent, {input}, context) => {
+        if(context.user){
+          const image = await InspirationalImage.create(input);
+          //need to update the user savedImages array
+          const updatedUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { userImages: image._id } },
+            { new: true, runValidators: true }
+          )
+            .populate({
+              path: 'userImages',
+              select: '-__v'
+            })
+  
+          console.log(updatedUser);
+  
+          return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddJewelryType: async (parent, args) => {
-
+      AddJewelryType: async (parent, args, context) => {
+        if(context.user){
+          const jewelryTypeData = await JewelryType.create({jewleryType: args.jewelryType, user_id: context.user._id});
+          return jewelryTypeData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddLayout: async (parent, args) => {
-
+      AddLayout: async (parent, {input}, context) => {
+        if(context.user){
+          const layoutData = await Layout.create({input});
+          return layoutData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddCollage: async (parent, args) => {
-
+      UpdateLayout: async (parent, {input}, context) => {
+        //TODO: finish this resolver!!
       },
-      UpdateLayout: async (parent, args) => {
-
+      AddLogo: async (parent, {input}, context) => {
+        if(context.user){
+          const logoData = await Logo.create(input);
+          //need to update the user Logos array
+          const updatedUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { savedLogos: logoData._id } },
+            { new: true, runValidators: true }
+          )
+            .populate({
+              path: 'savedLogos',
+              select: '-__v'
+            })
+  
+          console.log(updatedUser);
+  
+          return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddLogo: async (parent, args) => {
-
+      AddMaterial: async (parent, args, context) => {
+        if(context.user){
+          const materialData = await Material.create({type: args.type, pricePerOunce: args.pricePerOunce, user_id: context.user._id});
+          return materialData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddMaterial: async (parent, args) => {
-
+      AddShape: async (parent, args, context) => {
+        if(context.user){
+          const shapeData = await Shape.create({type: args.type, user_id: context.user._id});
+          return shapeData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddShape: async (parent, args) => {
-
+      AddShop: async (parent, {input}, context) => {
+        if(context.user){
+          const shopData = await Shop.create(input);
+          return shopData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddShop: async (parent, args) => {
-
+      AddStone: async (parent, args, context) => {
+        if(context.user){
+          const stoneData = await Stone.create({type: args.type, pricePerOunce: args.pricePerOunce, user_id: context.user._id});
+          return stoneData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
-      AddStone: async (parent, args) => {
-
-      },
-      AddStyle: async (parent, args) => {
-
+      AddStyle: async (parent, {input}, context) => {
+        if(context.user){
+          const styleData = await Style.create(input);
+          return styleData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
       },
       UpdateShop: async (parent, args) => {
-
+        //TODO: finish this resolver!!
       }
     }
   };

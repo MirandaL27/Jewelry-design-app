@@ -376,20 +376,20 @@ input StyleInput {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     AddCollage(input: CollageInput): Collage
-    AddColor(name: String!, hex: String!, rgb: String): Color
+    AddColor(name: String!, hex: String!, rgb: String, user_id: ID!): Color
     AddComponent(input: ComponentInput): Component
-    AddComponentType(componentType: String!): ComponentType
-    AddCountryName(countryName: String!): Country
+    AddComponentType(componentType: String!, user_id: ID!): ComponentType
+    AddCountryName(countryName: String!, user_id: ID!): Country
     AddDesign(input: DesignInput): Design
     AddImage(input: InspirationalImageInput): InspirationalImage
-    AddJewelryType(jewelryType: String!): JewelryType
+    AddJewelryType(jewelryType: String!, user_id: ID!): JewelryType
     AddLayout(input: LayoutInput): Layout
     UpdateLayout(input: LayoutInput): Layout
     AddLogo(input: Logo): Logo
-    AddMaterial(type: String!, pricePerOunce: Number): Material
-    AddShape(type: String!): Shape
+    AddMaterial(type: String!, pricePerOunce: Number, user_id: ID!): Material
+    AddShape(type: String!, user_id: ID!): Shape
     AddShop(input: ShopInput): Shop
-    AddStone(type: String!, pricePerOunce: Number): Stone
+    AddStone(type: String!, pricePerOunce: Number, user_id: ID!): Stone
     AddStyle(input: StyleInput): Style
     UpdateShop(input: ShopInput): Shop
   }
