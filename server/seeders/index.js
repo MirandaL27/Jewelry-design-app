@@ -1,10 +1,11 @@
 // const { FreeWeight } = require('../models');
-
-// const db = require('../config/connection');
+//import all models that need seeds
+///const db = require('../config/connection');
 
 // db.once('open', async () => {
 //   await FreeWeight.deleteMany({});
-
+//delete all pervious data in the seeded models
+//add seeds
 //   const freeWeightData = [
 //     {
 //       name:"Deadlift",
@@ -50,7 +51,7 @@
 //     }
     
 //   ];
-
+//insert everything into the database with the models
 //   const createFreeWeights = await FreeWeight.collection.insertMany(freeWeightData);
 
 //   console.log('all done!');
