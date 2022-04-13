@@ -171,12 +171,42 @@ const stoneData = [
 
 const styleData = [
     {
-        type: '',
-        background: '',
-        styleElements: '',
-        timePeriod: '',
-        notes: ''
-    }
+        type: 'Victorian - Romantic Period',
+        background: `This is the first period of victorian jeweltry and is known as the early victorian period.
+        Inpsiration was derived from the natural world, the Renaissance and Middle Ages. `,
+        styleElements: `Popular motifs: 
+        eyes, hands, hearts, anchors, crosses, arrows, 
+        clovers, love knots, garters, buckles, vines, and leaves
+        The Romantic Period saw a renewed interest in Gothic and Medieval themes.
+        Materials: 
+        agate, amber, amethyst, chalcedony, chrysoberyl, diamond, emerald, 
+        garnet, malachite, seed pearls, quartz, topaz, turquoise, ivory, lava stone, and tortoiseshell, red coral.
+        Popular Cuts: 
+        Rose Cut: round shape with a domed top and flat bottom.
+        Old Mine Cut: rounded square shape with many facets. Closely resembles today’s modern round brilliant cut.
+        Cabochon: rounded top and flat bottom.
+        Popular Jewelry Items: 
+        Acrostic Jewelry: Jewelry in which the stones spell out a word: 
+        ruby, emerald, garnet, amethyst, ruby, and diamond = REGARD
+        Cameos: carved faces often made of coral, shell and lava stone. Originated in Italy. 
+        Girandoles: These drop, cluster style earrings featured three dangling gemstones.`,
+        timePeriod: '1837-1860',
+        notes: ``
+    },
+    {
+        type: 'Victorian- Grand Period',
+        background: ``,
+        styleElements: ``,
+        timePeriod: '1861-1885',
+        notes: ``
+    },
+    {
+        type: 'Victorian- Aesthetic Period',
+        background: ``,
+        styleElements: ``,
+        timePeriod: '1885-1901',
+        notes: ``
+    },
 ];
 //insert everything into the database with the models
 //const createColor = await Color.collection.insertMany(colorData);

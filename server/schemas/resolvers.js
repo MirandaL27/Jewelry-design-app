@@ -255,10 +255,24 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      UpdateCollage: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const collageData = await Collage.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return collageData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       AddColor: async (parent, {input}, context) => {
         if(context.user){
           const color = await Color.create(input);
           return color;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      UpdateColor: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const colorData = await Color.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return colorData;
         }
         throw new AuthenticationError('You need to be logged in!');
       },
@@ -282,9 +296,23 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      UpdateComponent: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const componentData = await Component.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return componentData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       AddComponentType: async (parent, {input}, context) => {
         if(context.user){
           const compTypeData = await ComponentType.create(input);
+          return compTypeData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      UpdateComponentType: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const compTypeData = await ComponentType.findByIdAndUpdate(id, input, { new: true, runValidators: true });
           return compTypeData;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -293,6 +321,13 @@ const resolvers = {
         if(context.user){
           const countryName = await Country.create(input);
           return countryName;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      UpdateCountryName: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const countryData = await Country.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return countryData;
         }
         throw new AuthenticationError('You need to be logged in!');
       },
@@ -316,6 +351,13 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      UpdateDesign: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const designData = await Design.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return designData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       AddImage: async (parent, {input}, context) => {
         if(context.user){
           const image = await InspirationalImage.create(input);
@@ -336,9 +378,23 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      UpdateImage: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const imageData = await InspirationalImage.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return imageData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       AddJewelryType: async (parent, {input}, context) => {
         if(context.user){
           const jewelryTypeData = await JewelryType.create(input);
+          return jewelryTypeData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      UpdateJewelryType: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const jewelryTypeData = await JewelryType.findByIdAndUpdate(id, input, { new: true, runValidators: true });
           return jewelryTypeData;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -377,9 +433,23 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      UpdateLogo: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const logoData = await Logo.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return logoData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       AddMaterial: async (parent, {input}, context) => {
         if(context.user){
           const materialData = await Material.create(input);
+          return materialData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      UpdateMaterial: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const materialData = await Material.findByIdAndUpdate(id, input, { new: true, runValidators: true });
           return materialData;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -391,9 +461,23 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      UpdateShape: async ( parent, {id, input}, context) => {
+        if(context.user){
+          const shapeData = await Shape.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return shapeData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       AddShop: async (parent, {input}, context) => {
         if(context.user){
           const shopData = await Shop.create(input);
+          return shopData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      UpdateShop: async (parent, {id, input}, context) => {
+        if(context.user){
+          const shopData = await Shop.findByIdAndUpdate(id, input, { new: true, runValidators: true });
           return shopData;
         }
         throw new AuthenticationError('You need to be logged in!');
@@ -405,6 +489,13 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      UpdateStone: async (parent, {id, input}, context) => {
+        if(context.user){
+          const stoneData = await Stone.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return stoneData;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
       AddStyle: async (parent, {input}, context) => {
         if(context.user){
           const styleData = await Style.create(input);
@@ -412,10 +503,10 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      UpdateShop: async (parent, {id, input}) => {
+      UpdateStyle: async ( parent, {id, input}, context) => {
         if(context.user){
-          const shopData = await Shop.findByIdAndUpdate(id, input, { new: true, runValidators: true });
-          return shopData;
+          const styleData = await Style.findByIdAndUpdate(id, input, { new: true, runValidators: true });
+          return styleData;
         }
         throw new AuthenticationError('You need to be logged in!');
       }

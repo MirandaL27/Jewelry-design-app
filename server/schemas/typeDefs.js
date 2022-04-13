@@ -115,6 +115,8 @@ type InspirationalImage {
   user: User
   etsyShop: Shop
   createdAt: String
+  sold: Boolean
+  bestSeller: Boolean
 }
 
 type JewelryType{
@@ -297,6 +299,8 @@ input InspirationalImageInput {
   user: ID
   etsyShop: ShopInput
   createdAt: String
+  sold: Boolean
+  bestSeller: Boolean
 }
 
 input JewelryTypeInput{
@@ -415,22 +419,35 @@ type Query {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     AddCollage(input: CollageInput): Collage
+    UpdateCollage(id: ID!, input: Collageinput): Collage
     AddColor(input: ColorInput): Color
+    UpdateColor(id: ID!, input: ColorInput): Color
     AddComponent(input: ComponentInput): Component
+    UpdateComponent(id: ID!, input: ComponentInput): Component
     AddComponentType(input: ComponentTypeInput): ComponentType
+    UpdateComponentType(id: ID!, input: ComponentTypeInput): ComponentType
     AddCountryName(input: CountryInput): Country
+    UpdateCountryName(id: ID!, input: CountryInput): Country
     AddDesign(input: DesignInput): Design
+    UpdateAddDesign(id: ID!, input: DesignInput): Design
     AddImage(input: InspirationalImageInput): InspirationalImage
+    UpdateImage(id: ID!, input: InspirationalImageInput): InspirationalImage
     AddJewelryType(input: JewelryTypeInput): JewelryType
+    UpdateJewelryType(id: ID!, input: JewelryTypeInput): JewelryType
     AddLayout(input: LayoutInput): Layout
     UpdateLayout(id: ID!, input: LayoutInput): Layout
     AddLogo(input: LogoInput): Logo
+    UpdateLogo(id: ID!, input: LogoInput): Logo
     AddMaterial(input: MaterialInput): Material
+    UpdateMaterial(id: ID!, input: MaterialInput): Material
     AddShape(input: ShapeInput): Shape
+    UpdateShape(id: ID!, input: ShapeInput): Shape
     AddShop(input: ShopInput): Shop
-    AddStone(input: StoneInput): Stone
-    AddStyle(input: StyleInput): Style
     UpdateShop(id: ID!, input: ShopInput): Shop
+    AddStone(input: StoneInput): Stone
+    UpdateStone(id: ID!, input: StoneInput): Stone
+    AddStyle(input: StyleInput): Style
+    UpdateStyle(id: ID!, input: StyleInput): Style
   }
 `;
 

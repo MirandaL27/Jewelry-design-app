@@ -17,7 +17,7 @@ const ColorSchema = new Schema(
             trim: true
         },
         rgb: {
-            type: [Number, Number, Number],
+            type: String,
         }
     }
 
