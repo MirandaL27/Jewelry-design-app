@@ -92,6 +92,9 @@ db.once('open', async () => {
             componentType: 'Charm'
         },
         {
+            componentType: 'Connector'
+        },
+        {
             componentType: 'Chain'
         },
         {
