@@ -419,7 +419,7 @@ type Query {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     AddCollage(input: CollageInput): Collage
-    UpdateCollage(id: ID!, input: Collageinput): Collage
+    UpdateCollage(id: ID!, input: CollageInput): Collage
     AddColor(input: ColorInput): Color
     UpdateColor(id: ID!, input: ColorInput): Color
     AddComponent(input: ComponentInput): Component
@@ -429,7 +429,7 @@ type Query {
     AddCountryName(input: CountryInput): Country
     UpdateCountryName(id: ID!, input: CountryInput): Country
     AddDesign(input: DesignInput): Design
-    UpdateAddDesign(id: ID!, input: DesignInput): Design
+    UpdateDesign(id: ID!, input: DesignInput): Design
     AddImage(input: InspirationalImageInput): InspirationalImage
     UpdateImage(id: ID!, input: InspirationalImageInput): InspirationalImage
     AddJewelryType(input: JewelryTypeInput): JewelryType
