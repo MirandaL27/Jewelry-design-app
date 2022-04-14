@@ -131,8 +131,12 @@ const layoutData = [
 
 const materialData = [
     {
-        type: '',
-        pricePerOunce: 0.0
+        type: '14k Gold',
+        pricePerOunce: '$1154.56'
+    },
+    {
+        type: "Sterling Silver",
+        pricePerOunce: '$25.29'
     }
 ];
 
@@ -164,8 +168,13 @@ const shapeData = [
 ];
 const stoneData = [
     {
-        type: '',
-        pricePerOunce: 0.0
+        type: 'Amethyst',
+        pricePerKarat: `Prices for high quality cut stones are typically 
+        in the range of $20 to $30 per carat, with particularly fine pieces around $40 per carat.`
+    },
+    {
+        type: 'Peridot',
+        pricePerKarat: '$50-$80'
     }
 ];
 

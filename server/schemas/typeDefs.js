@@ -195,7 +195,7 @@ type Shop{
 
 type Stone{
   type: String
-  pricePerOunce: Float
+  pricePerKarat: String
   user_id: ID
 }
 
@@ -377,7 +377,7 @@ input ShopInput {
 
 input StoneInput{
   type: String!
-  pricePerOunce: Float
+  pricePerKarat: String
   user_id: ID!
 }
 
