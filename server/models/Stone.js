@@ -7,8 +7,8 @@ const StoneSchema = new Schema(
             required: true,
             trim: true
         },
-        pricePerOunce: {
-            type: Number
+        pricePerCarat: {
+            type: String
         },
         user_id: {
             type: Schema.Types.ObjectId,

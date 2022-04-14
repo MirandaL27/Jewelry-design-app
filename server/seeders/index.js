@@ -4,16 +4,22 @@ const db = require('../config/connection');
 
  db.once('open', async () => {
      //delete all pervious data in the seeded models
-     Promise.all([Color.deleteMany({user_id: null}), 
-        ComponentType.deleteMany({user_id: null}),
-        Country.deleteMany({user_id: null}),
-        JewelryType.deleteMany({user_id: null}), 
-        Layout.deleteMany({user_id: null}), 
-        Material.deleteMany({user_id: null}), 
-        Shape.deleteMany({user_id: null}), 
-        Stone.deleteMany({user_id: null}), 
-        Style.deleteMany({user_id: null})
-    ]);
+     try{
+        Promise.all([Color.deleteMany({user_id: null}), 
+            ComponentType.deleteMany({user_id: null}),
+            Country.deleteMany({user_id: null}),
+            JewelryType.deleteMany({user_id: null}), 
+            Layout.deleteMany({user_id: null}), 
+            Material.deleteMany({user_id: null}), 
+            Shape.deleteMany({user_id: null}), 
+            Stone.deleteMany({user_id: null}), 
+            Style.deleteMany({user_id: null})
+        ]);
+     }
+     catch(e){
+        console.log(e);
+     }
+     
 //add seeds
 const colorData = [
     {
@@ -169,7 +175,7 @@ const shapeData = [
 const stoneData = [
     {
         type: 'Amethyst',
-        pricePerKarat: `Prices for high quality cut stones are typically 
+        pricePerCarat: `Prices for high quality cut stones are typically 
         in the range of $20 to $30 per carat, with particularly fine pieces around $40 per carat.`
     },
     {
@@ -271,6 +277,7 @@ const styleData = [
 ];
 //insert everything into the database with the models
 //const createColor = await Color.collection.insertMany(colorData);
+try{
     Promise.all([Color.collection.insertMany(colorData),
         ComponentType.collection.insertMany(componentTypeData),
         Country.collection.insertMany(countryData),
@@ -281,7 +288,11 @@ const styleData = [
         Stone.collection.insertMany(stoneData),
         Style.collection.insertMany(styleData)
     ]);
-
+}
+catch(e){
+    console.log(e);
+}
+    
    console.log('all done!');
   process.exit(0);
  });

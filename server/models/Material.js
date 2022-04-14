@@ -8,7 +8,7 @@ const MaterialSchema = new Schema(
             trim: true
         },
         pricePerOunce: {
-            type: Number,
+            type: String,
         },
         user_id: {
             type: Schema.Types.ObjectId,

@@ -174,7 +174,7 @@ type Logo {
 
 type Material {
   type: String
-  pricePerOunce: Float
+  pricePerOunce: String
   user_id: ID
 }
 
@@ -195,7 +195,7 @@ type Shop{
 
 type Stone{
   type: String
-  pricePerKarat: String
+  pricePerCarat: String
   user_id: ID
 }
 
@@ -357,7 +357,7 @@ input LogoInput {
 
 input MaterialInput {
   type: String!
-  pricePerOunce: Float
+  pricePerOunce: String
   user_id: ID!
 }
 
@@ -377,7 +377,7 @@ input ShopInput {
 
 input StoneInput{
   type: String!
-  pricePerKarat: String
+  pricePerCarat: String
   user_id: ID!
 }
 
