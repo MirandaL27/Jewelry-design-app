@@ -46,6 +46,12 @@ const InspirationalImageSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: "Shop"
         },
+        sold: {
+            type: Boolean
+        },
+        bestSeller: {
+            type: Boolean
+        },
         createdAt: {
             type: Date,
             default: Date.now,
