@@ -191,21 +191,73 @@ const styleData = [
         Cameos: carved faces often made of coral, shell and lava stone. Originated in Italy. 
         Girandoles: These drop, cluster style earrings featured three dangling gemstones.`,
         timePeriod: '1837-1860',
-        notes: ``
+        notes: `Information from : https://www.gemsociety.org/article/victorian-period-jewelry-1837-1860/
+        See README for full citation`
     },
     {
-        type: 'Victorian- Grand Period',
-        background: ``,
-        styleElements: ``,
+        type: 'Victorian - Grand Period',
+        background: `With the advent of electricity, gems were in style as they dazzled in the light.
+        Heavy jewelry was common during this time as well as bolder pieces that reflected the changing roles
+        for women at the time. Gypsy and Pave settings were used to hold gems.  A Gypsy setting has little prongs that hold
+        the gem in place, whereas a pave setting has almost invisible prongs. Archeological digs continued during this period,
+        generating great public curiosity. 
+        Thus, Ancient Greek, Roman, and Egyptian designs remained popular and inspired cameo use. 
+        Excavations of Ancient Etruscan cities in Italy brought about a revival of Etruscan designs in jewelry. 
+        In particular, an ancient metal technique featuring fine, beaded granulation was resurrected.`,
+        styleElements: `Materials: Low karat gold (9k, 12k, and 15k), silver, steel, rolled gold
+        Motifs: acorns, bees, bells, birds, crescents, crosses, daisies, hearts, monograms, stars, and shield shapes. 
+        Geometric patterns were common. Enameling remained popular.
+        Popular stones: amethyst, diamond, garnet, jet, onyx, opal, pearl, ruby, sapphire, and turquoise. 
+        “Carbuncles,” or cabochon-cut garnets, commonly appeared in pendants, brooches, and necklaces.
+        Materials such as bog oak, coral, ivory, and tortoiseshell were also used as gems.
+        Goldstone, a glass gem simulant, was widely used.
+        Notable gem cutting styles included the following:
+        Rose Cut: round shape with a domed top and flat bottom.
+        Old Mine Cut: rounded square shape with many facets. Closely resembles today’s modern round brilliant cut.
+        Cabochon: rounded top and flat bottom.
+        popular jewelry pieces: 
+        Earring of all sizes were popular. Post earrings were introduced during this time period.
+        Other popular items included the following:
+        Hair jewelry
+        Large necklaces with large pendants
+        Long, rectangular bar pins
+        Tiaras and tortoiseshell combs
+        This period also featured cabochons with embedded gems, and micro mosaic jewelry.
+        `,
         timePeriod: '1861-1885',
-        notes: ``
+        notes: `Information from: https://www.gemsociety.org/article/victorian-period-1861-1885/
+        See README for full citation`
     },
     {
-        type: 'Victorian- Aesthetic Period',
-        background: ``,
-        styleElements: ``,
+        type: 'Victorian - Aesthetic Period',
+        background:`This is the late victorian period.  
+        There was an emerging middle class and women were now a integral part of the workforce. 
+        The heave jewelry of old didn't work well with the new active lifestyles of women, 
+        so pieces were made lighter and smaller Etruscan and Egyptian revival themes continued 
+        to fascinate jewelry enthusiasts. Aesthetic Period pieces also featured Oriental and sporting themes..
+        Delicate pieces replaced the heavy opulance of the past. 
+        Most jewelry of this period was machine produced and marks were stamped on it.`,
+        styleElements: `Popular metals: gold, rolled gold, silver, oxidized silver platinum
+        Motifs: animal heads, barrels, bows, clovers, crescents, horseshoes, knots, oak leaves, owls, 
+        quatrefoils, stars, trefoils, and wishbones. 
+        Designers often combined double hearts with crowns or knots.
+        Popular stones: amethyst, aquamarine, chrysoberyl, chrysoprase, diamond, emerald, black glass, 
+        horn, moonstone, opal, pearl, peridot, quartz, ruby, sapphire, and turquoise.
+        Notable gem cutting styles included the following:
+        Rose Cut: round shape with a domed top and flat bottom.
+        Old Mine Cut: rounded square shape with many facets. Closely resembles today’s modern round brilliant cut.
+        Old European Cut: round faceted shape. Although a precursor to today’s modern round brilliant cut, it’s clunkier. 
+        You’ll frequently find this cut used in rings dated through the 1900s.
+        Cabochon: rounded top and flat bottom.
+        Tiffany and Co. kick-started the diamond solitaire engagement ring trend during this time period.
+        Popular pieces included small stud earrings, stick pins, and class rings. 
+        People often wore heart-shaped lockets on bracelets.
+        Small brooches were often worn en masse, scattered across necklines.
+        Vinaigrettes, small metal containers for scented sponges or spices, enjoyed widespread use.
+        Chokers or dog-collar style necklaces were common.`,
         timePeriod: '1885-1901',
-        notes: ``
+        notes: `Information from: https://www.gemsociety.org/article/victorian-period-1885-1901-late-period/
+        See README for full citation`
     },
 ];
 //insert everything into the database with the models
