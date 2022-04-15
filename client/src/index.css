@@ -7,8 +7,13 @@ body {
 
 h1, h2 {
   font-family: 'Beau Rivage', cursive;
+  text-shadow: 5px 5px 5px rgb(99, 2, 7);
   font-size: 120px;
   font-weight: 400;
+}
+
+.black-text-shadow {
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
 h3 {
@@ -22,7 +27,7 @@ h6 {
   font-family: 'Rochester', cursive;}
 
 .list-style{
-  list-style-type: "\1F538";
+  list-style-image: url('./assets/red_diamond.png');
 }
 
 .medium {
@@ -71,6 +76,9 @@ border-style: solid;
 
 .bg-red {
   background-color: rgb(66, 2, 5);;   
+}
+.red-box-shadow {
+  box-shadow: 0px 0px 50px 0px rgb(99, 2, 7);;
 }
 
 .red-bg-hover:hover{

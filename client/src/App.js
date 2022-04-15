@@ -5,6 +5,7 @@ import { setContext } from '@apollo/client/link/context';
 import Homepage from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Component from './pages/Component';
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -31,6 +32,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/' component={Homepage} />
+          <Route exact path='/components' component={Component} />
         </Switch>
       </Router>
       <Footer />

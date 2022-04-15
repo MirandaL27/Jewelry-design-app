@@ -7,7 +7,7 @@ function Homepage() {
         <Container className='bg-image' style={{ height: '100vh' }} fluid>
             <Col className='bg-overlay' style={{ width: '100%', height: '100%' }}>
                 <Row className="d-flex justify-content-center" style={{ width: '100%' }}>
-                    <h2 className="maroon-background pt-2 pb-2 pl-2 pr-5 rounded">Welcome</h2>
+                    <h2 className="pt-2 pb-2 pl-2 pr-5">Welcome</h2>
                 </Row>
                 <Row className="d-flex justify-content-center" style={{ width: '100%' }}>
                     <Row style={{ width: '80%' }}>

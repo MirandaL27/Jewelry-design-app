@@ -6,7 +6,7 @@ function Navbar(props) {
     return (
         <RNavbar className = "bg-red" expand='lg'>
         <Container fluid>
-          <RNavbar.Brand className = "medium gold-font red-bg-hover transition p-2 rounded" href="/">
+          <RNavbar.Brand className = "medium gold-font red-bg-hover transition p-2 rounded black-text-shadow" href="/">
             Jewelry Design
           </RNavbar.Brand>
           <RNavbar.Toggle aria-controls='navbar' />
@@ -18,7 +18,7 @@ function Navbar(props) {
               <Nav.Link href="/" className = "small gold-font red-bg-hover transition p-2 rounded">
                 Help
               </Nav.Link>
-              <Nav.Link href="/" className = "small gold-font red-bg-hover transition p-2 rounded">
+              <Nav.Link href="/components" className = "small gold-font red-bg-hover transition p-2 rounded">
                 Components
               </Nav.Link>
               <Nav.Link href="/" className = "small gold-font red-bg-hover transition p-2 rounded">
