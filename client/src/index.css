@@ -73,4 +73,11 @@ border-style: solid;
   background-color: rgb(66, 2, 5);;   
 }
 
+.red-bg-hover:hover{
+  background-color: red;
+}
+  .transition{
+    transition: all 0.5s ease-in-out;
+  }
+
 
