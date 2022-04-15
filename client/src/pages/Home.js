@@ -11,7 +11,7 @@ function Homepage() {
                 </Row>
                 <Row className="d-flex justify-content-center" style={{ width: '100%' }}>
                     <Row style={{ width: '80%' }}>
-                        <Col className="m-5 p-5 ornate-border">
+                        <Col className="m-3 p-5 ornate-border">
                             <div className="maroon-background p-2 rounded">
                             <h4>Getting Started: </h4>
                             <ul className = "small list-style">
@@ -22,7 +22,7 @@ function Homepage() {
                             </div>
                         </Col>
 
-                        <Col className="m-5 p-5 ornate-border">
+                        <Col className="m-3 p-5 ornate-border">
                             <div className="maroon-background p-2 rounded">
                             <h4>Usage: </h4>
                             <ul className = "small list-style">
