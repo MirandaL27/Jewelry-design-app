@@ -14,12 +14,10 @@ function Homepage() {
                         <Col className="m-5 p-5 ornate-border">
                             <div className="maroon-background p-2 rounded">
                             <h4>Getting Started: </h4>
-                            <p className = "small">Click on the settings link to configure dropdown options</p>
-                            <p className = "small">(including, but not limited to): </p>
                             <ul className = "small list-style">
-                                <li>Color</li>
-                                <li>Style (e.g. victorian, gothic, boho etc.)</li>
-                                <li>Component Type (e.g. bead, bead cap, connector, charm etc.)</li>
+                                <li className="small">Click the login/signup link to make an account or sign in.</li>
+                                <li className = "small">Click on the settings link to configure dropdown options (including, but not limited to):</li>
+                                <li className = 'small'>Click on the help link for more detailed instructions.</li>
                             </ul>
                             </div>
                         </Col>

@@ -25,6 +25,10 @@ h6 {
   list-style-type: "\1F538";
 }
 
+.medium {
+  font-size: 40px;
+}
+
 .small {
   font-weight: 300;
   font-size: 25px;
@@ -58,7 +62,15 @@ border-style: solid;
 }
 
 .gold-font {
-  color: rgb(255, 234, 0);
+  color: rgb(255, 234, 0) !important; 
+}
+
+.maroon-font {
+  color: rgb(99, 2, 7);
+}
+
+.bg-red {
+  background-color: rgb(66, 2, 5);;   
 }
 
 
