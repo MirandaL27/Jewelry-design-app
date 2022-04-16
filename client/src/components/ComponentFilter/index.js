@@ -37,9 +37,9 @@ function ComponentFilter() {
                             </Row>
 
                             <Row>
-                                <label htmlFor="componentType-dd">Style: </label>
-                                <Dropdown id="componentType-dd">
-                                    <Dropdown.Toggle id="dropdown-button-dark-example1" className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
+                                <label htmlFor="componentStyle-dd">Style: </label>
+                                <Dropdown id="componentStyle-dd">
+                                    <Dropdown.Toggle className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
                                         { }
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu className="small gold-background maroon-font">
@@ -49,9 +49,9 @@ function ComponentFilter() {
                             </Row>
 
                             <Row>
-                                <label htmlFor="componentType-dd">Material: </label>
-                                <Dropdown id="componentType-dd">
-                                    <Dropdown.Toggle id="dropdown-button-dark-example1" className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
+                                <label htmlFor="componentMaterialType-dd">Material: </label>
+                                <Dropdown id="componentMaterialType-dd">
+                                    <Dropdown.Toggle className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
                                         { }
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu className="small gold-background maroon-font">
@@ -61,9 +61,9 @@ function ComponentFilter() {
                             </Row>
 
                             <Row>
-                                <label htmlFor="componentType-dd">Stone Type: </label>
-                                <Dropdown id="componentType-dd">
-                                    <Dropdown.Toggle id="dropdown-button-dark-example1" className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
+                                <label htmlFor="componentStoneType-dd">Stone Type: </label>
+                                <Dropdown id="componentStoneType-dd">
+                                    <Dropdown.Toggle className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
                                         { }
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu className="small gold-background maroon-font">
@@ -73,9 +73,9 @@ function ComponentFilter() {
                             </Row>
 
                             <Row>
-                                <label htmlFor="componentType-dd">Country Of Origin: </label>
-                                <Dropdown id="componentType-dd">
-                                    <Dropdown.Toggle id="dropdown-button-dark-example1" className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
+                                <label htmlFor="componentCountry-dd">Country Of Origin: </label>
+                                <Dropdown id="componentCountry-dd">
+                                    <Dropdown.Toggle className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
                                         { }
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu className="small gold-background maroon-font">
@@ -85,9 +85,9 @@ function ComponentFilter() {
                             </Row>
 
                             <Row>
-                                <label htmlFor="componentType-dd">Shape: </label>
-                                <Dropdown id="componentType-dd">
-                                    <Dropdown.Toggle id="dropdown-button-dark-example1" className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
+                                <label htmlFor="componentShape-dd">Shape: </label>
+                                <Dropdown id="componentShape-dd">
+                                    <Dropdown.Toggle className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
                                         { }
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu className="small gold-background maroon-font">
@@ -120,7 +120,117 @@ function ComponentFilter() {
                                 />
                             </Row>
 
-                            
+                            <Row>
+                                <label htmlFor="componentQuantity">Component Quantity: </label>
+                                <input id="componentQuantity"
+                                    type="Number"
+                                    placeholder="0"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentMaxPrice">Component Max Price: </label>
+                                <input id="componentMaxPrice"
+                                    type="Decimal"
+                                    placeholder="00.00"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentMaxQuantity">Component Max  Quantity: </label>
+                                <input id="componentMaxQuantity"
+                                    type="Number"
+                                    placeholder="0"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentFreeShipping">Free Shipping? : </label>
+                                <input id="componentFreeShipping"
+                                    type="Checkbox"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentShippingPrice">Component Shipping Price: </label>
+                                <input id="componentShippingPrice"
+                                    type="Decimal"
+                                    placeholder="00.00"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentShippingTime">Component Shipping Time : </label>
+                                <input id="componentShippingTime"
+                                    type="text"
+                                    placeholder="Component Shipping Time"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentColor-dd">Color: </label>
+                                <Dropdown id="componentColor-dd">
+                                    <Dropdown.Toggle className='"small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"'>
+                                        { }
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu className="small gold-background maroon-font">
+                                        <DropDownItem option={'item1'} />
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </Row>                            
+
+                            <Row>
+                                <label htmlFor="componentLink">Component Link : </label>
+                                <input id="componentLink"
+                                    type="text"
+                                    placeholder="Component Link"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentPhotoLink">Component Photo Link : </label>
+                                <input id="componentPhotoLink"
+                                    type="text"
+                                    placeholder="Component Photo Link"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentEtsyName">Component Etsy Item Name: </label>
+                                <input id="componentEtsyName"
+                                    type="text"
+                                    placeholder="Component Etsy Item Name"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentShopName">Component Shop Name : </label>
+                                <input id="componentShopName"
+                                    type="text"
+                                    placeholder="Component Shop Name"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentSoldOut">Sold Out? : </label>
+                                <input id="componentSoldOut"
+                                    type="Checkbox"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentBestSeller">Best Seller? : </label>
+                                <input id="componentBestSeller"
+                                    type="Checkbox"
+                                />
+                            </Row>
+
+                            <Row>
+                                <label htmlFor="componentLikeRating">Like Rating: </label>
+                                <input id="componentLikeRating"
+                                    type="Checkbox"
+                                />
+                            </Row>
 
                             <Row>
                                 <Button className="small gold-background maroon-font red-shadow-hover transition no-border red-bg-active">Clear</Button>
