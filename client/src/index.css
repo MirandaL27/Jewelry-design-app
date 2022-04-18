@@ -85,6 +85,11 @@ border-style: solid;
   background-color: rgb(255, 234, 0) !important;
 }
 
+#componentSoldOut,#componentBestSeller,#componentLikeRating,#componentFreeShipping {
+  background-color: rgb(255, 234, 0) !important;
+  border: 2px solid rgb(246, 190, 5);
+}
+
 .dark-gold-background {
   background-color: rgb(246, 190, 5) !important;
 }
