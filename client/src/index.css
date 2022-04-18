@@ -75,27 +75,84 @@ border-style: solid;
 }
 
 .bg-red {
-  background-color: rgb(66, 2, 5);;   
+  background-color: rgb(66, 2, 5);   
 }
 .red-box-shadow {
-  box-shadow: 0px 0px 50px 0px rgb(99, 2, 7);;
+  box-shadow: 0px 0px 50px 0px rgb(99, 2, 7);
 }
 
 .gold-background {
   background-color: rgb(255, 234, 0) !important;
 }
 
-#componentSoldOut,#componentBestSeller,#componentLikeRating,#componentFreeShipping {
-  background-color: rgb(255, 234, 0) !important;
-  border: 2px solid rgb(246, 190, 5);
+
+.form-check-input {
+  /* background: rgb(255, 234, 0);
+  accent-color: rgb(246, 190, 5); */
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: rgb(255, 234, 0);
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid rgb(246, 190, 5);
+  background: rgb(255, 234, 0);
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.form-check-input::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgb(99, 2, 7);
+}
+
+.form-check-input:checked::before {
+  transform: scale(1);
 }
 
 .dark-gold-background {
   background-color: rgb(246, 190, 5) !important;
 }
 
-::placeholder{
+.form-control::placeholder{
   color: red;
+}
+
+.dropdown-item{
+  color: rgb(66, 2, 5);
+}
+
+.dropdown-item:hover{
+  background-color: rgb(246, 190, 5);
+}
+
+.dropdown-item:active{
+  color: red;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.no-border-override{
+  border-style: none !important;
 }
 .no-border{
   border-style: none;

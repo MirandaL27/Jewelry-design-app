@@ -4,7 +4,7 @@ import DropDownItem from '../DropDownItem';
 
 function ComponentFilter() {
     const [open, setOpen] = useState(false);
-
+    const [filterValues, setFilterValues] = useState([]);
     return (
 
         <div className="p-3 m-3 text-center" style={{ width: '100%' }}>
@@ -121,7 +121,7 @@ function ComponentFilter() {
 
                                         <Form.Label className="small" style={{ display: 'block' }}>Component Price: </Form.Label>
                                         <InputGroup className="mb-3">
-                                            <InputGroup.Text id="dollar-addon0" className="small dark-gold-background">$</InputGroup.Text>
+                                            <InputGroup.Text id="dollar-addon0" className="small dark-gold-background no-border-override">$</InputGroup.Text>
                                             <Form.Control type="Number" step={0.01}
                                                 className="small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"
                                                 placeholder="0.00"
@@ -138,7 +138,7 @@ function ComponentFilter() {
 
                                         <Form.Label className="small">Component Max Price: </Form.Label>
                                         <InputGroup className="mb-3">
-                                            <InputGroup.Text id="dollar-addon" className="small dark-gold-background">$</InputGroup.Text>
+                                            <InputGroup.Text id="dollar-addon" className="small dark-gold-background no-border-override">$</InputGroup.Text>
                                             <Form.Control type="Number" step={0.01}
                                                 className="small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"
                                                 placeholder="0.00"
@@ -170,7 +170,7 @@ function ComponentFilter() {
 
                                         <Form.Label className="small">Component Shipping Price: </Form.Label>
                                         <InputGroup className="mb-3">
-                                            <InputGroup.Text id="dollar-addon2" className="small dark-gold-background">$</InputGroup.Text>
+                                            <InputGroup.Text id="dollar-addon2" className="small dark-gold-background no-border-override">$</InputGroup.Text>
                                             <Form.Control type="Number" step={0.01}
                                                 className="small gold-background maroon-font red-shadow-hover transition no-border red-bg-active"
                                                 placeholder="0.00"
@@ -224,24 +224,24 @@ function ComponentFilter() {
                                             />
                                         </Form.Group>
 
-                                        <Form.Group>
+                                        <Form.Group style={{height: '97px'}}>
                                             <Form.Label className="small" >Free Shipping? : </Form.Label>
                                             <Form.Check id="componentFreeShipping" />
                                         </Form.Group>
 
-                                        <Form.Group>
+                                        <Form.Group style={{height: '97px'}}>
                                             <Form.Label className="small">Sold Out? : </Form.Label>
                                             <Form.Check id="componentSoldOut"
                                             />
                                         </Form.Group>
 
-                                        <Form.Group>
+                                        <Form.Group style={{height: '97px'}}>
                                             <Form.Label className="small">Best Seller? : </Form.Label>
                                             <Form.Check id="componentBestSeller"
                                             />
                                         </Form.Group>
 
-                                        <Form.Group>
+                                        <Form.Group style={{height: '97px'}}>
                                             <Form.Label className="small">Like Rating: </Form.Label>
                                             <Form.Check id="componentLikeRating"
                                             />
