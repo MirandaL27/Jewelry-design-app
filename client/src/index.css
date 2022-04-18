@@ -85,6 +85,13 @@ border-style: solid;
   background-color: rgb(255, 234, 0) !important;
 }
 
+.dark-gold-background {
+  background-color: rgb(246, 190, 5) !important;
+}
+
+::placeholder{
+  color: red;
+}
 .no-border{
   border-style: none;
   border-color: transparent;
